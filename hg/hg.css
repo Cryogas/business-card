@@ -1,0 +1,86 @@
+/* @font-face = used for downloaded fonts */
+@font-face {
+    src: url("Gravedigger-8BOZ.ttf");
+    font-family: gravedigger;
+}
+
+
+body {
+    margin: 50px ;
+}
+
+.b1 {
+    border: 1px solid;
+}
+
+.card {
+    border-bottom: 10px solid  #ADB5BD;
+    background-color: #E9ECEF;
+    justify-content: space;
+    width: 440px;
+    height: 250px;
+    margin: 0 auto;
+    border-radius: 10px;
+    transition: 1.2s;
+    box-shadow: 0px 0px 10px;
+}
+
+.card:hover{
+    color: #80b0ba;
+    border-bottom: 10px solid  #80b0ba;
+    background-color: #1a1d1a;
+    justify-content: space;
+    width: 440px;
+    height: 250px;
+    margin: 0 auto;
+    border-radius: 10px;
+    transition: 1.5s;
+    box-shadow: none;
+}
+
+.card:hover #linkedinlogo{
+    transition: 1.5s;
+    filter: invert(72%) sepia(25%) saturate(387%) hue-rotate(143deg) brightness(88%) contrast(89%);
+}
+.company-name {
+    display: flex;
+    font-family: gravedigger;
+    padding-top: 10px;
+    text-align: center;
+    
+}
+
+.logo {
+    height: 50px;
+    margin: 7px 120px 0 20px;
+}
+
+.cardd {
+    display: flex;
+    justify-content: space;
+    margin: 0 auto;
+}
+
+.profile {
+    margin: 5px 30px;
+}
+.profilepic {
+    height: 130px;
+    border-radius: 5px;
+}
+
+.details{
+    margin: 0px 5px;
+    font-family: 'Oxanium', sans-serif;
+
+}
+
+#linkedinlogo {
+    display: block;
+    height:24px;
+    margin: 0 70px 0px auto;
+    filter: invert(74%) sepia(7%) saturate(301%) hue-rotate(169deg) brightness(97%) contrast(90%);
+    border: 1px solid blue;
+    
+
+}
