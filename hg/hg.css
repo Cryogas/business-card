@@ -72,14 +72,15 @@ body {
 .details{
     margin: 0px 5px;
     font-family: 'Oxanium', sans-serif;
+    
 }
 
 #linkedinlogo {
     display: block;
     height:24px;
-    margin: 0 70px 0px auto;
+    margin: 140px 70px 0px auto;
     filter: invert(74%) sepia(7%) saturate(301%) hue-rotate(169deg) brightness(97%) contrast(90%);
     border: 1px solid blue;
-    
+    cursor: pointer;
 
 }

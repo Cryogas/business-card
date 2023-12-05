@@ -10,12 +10,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Oxanium&display=swap" rel="stylesheet">
     <title>Profile Page</title>
-    <script src="hg.js"></script>
 </head>
 <body>
     <div class="card">
         <div class="company-name">
-            <a href="https://www.google.com/" target="_blank"><img src="img\7611770.png" alt="" class="logo"></a>
+            <img src="img\7611770.png" alt="" class="logo" onclick="window.open('https://www.google.com/')">
             <span class="nama">
                 <h2>HGLIM LLC</h2>
             </span>
@@ -26,17 +25,13 @@
             </div>
     
             <div class="details">
-                <h3>Lim Hock Guan (26)</h3>
+                <h3 id="profileName" onmouseover=normal() >Lim Hock Guan (26)</h3>
                 <p>FrontEnd Developer</p>
                 <h4>Malaysia</h4>
             </div>
+            <img src="img\linkedin.png" alt="linkedin" id="linkedinlogo" onclick="window.open('https://www.linkedin.com/in/hg-lim-925ab3271/')">
         </div>
-        <div>
-            <a href="https://www.linkedin.com/in/hg-lim-925ab3271/" target="_blank" id="link">
-                <img src="img\linkedin.png" alt="linkedin" id="linkedinlogo">
-        </div>
-        </a>
-
     </div>
+    <script src="hg.js"></script>
 </body>
 </html>
