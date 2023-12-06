@@ -3,9 +3,6 @@ let profileName = document.getElementById("profileName")
 console.log(profileName.innerText.length)
 let normalText = profileName.innerText
 
-
-
-
 document.getElementById("profileName").onmouseover = () => {
 
     let iterations = 0;
@@ -31,7 +28,6 @@ document.getElementById("profileName").onmouseover = () => {
     
     },30);
 }
-
 
 
     // let matrixText = ""
