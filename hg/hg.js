@@ -1,44 +1,55 @@
-const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*<>:"
-let profileName = document.getElementById("profileName")
-console.log(profileName.innerText.length)
-let normalText = profileName.innerText
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!@$^&"
 
-document.getElementById("profileName").onmouseover = () => {
 
-    let iterations = 0;
-    
-    const interval = setInterval(() => {
-        profileName.innerText = profileName.innerText.split("")
-        .map((letter, index) => {
-            if (index < iterations) {
-                return profileName.dataset.value[index];
-            }
-    
-            return letters[Math.floor(Math.random() * 63)]
-        })
-        .join("");
-    
-        console.log(profileName.innerText)
-    
-        if (iterations >= profileName.dataset.value.length) {
-            clearInterval(interval);
-            }
-        iterations += 1/10;
+createHoverEffect= (elementID, initialValue) => {
+    let isMouseOver = false;
+    let interval;
+    const targetElement = document.getElementById(elementID)
+    targetElement.addEventListener("mouseenter", () => {
+        isMouseOver = true;
+        let iterations = 0;
+
+        clearInterval(interval)
         
-    
-    },30);
-}
+        interval = setInterval(() => {
+            targetElement.innerText = targetElement.innerText.split("")
+            .map((letter, index) => {
+                if (index < iterations) {
+                    return targetElement.dataset.value[index];
+                }
+        
+                return letters[Math.floor(Math.random() * 31)]
+            })
+            .join("");
+        
+        
+            if (iterations >= targetElement.dataset.value.length) {
+                clearInterval(interval);
+                }
+            iterations += 1/7;
+            
+        
+        },30);
+    });
 
 
-    // let matrixText = ""
-    // for (let i = 0; i < 12; i++) {
-    //     matrixText += letters[Math.floor(Math.random() * 63)];
-    // }
-    // return matrixText;
+    targetElement.addEventListener("mouseleave", () => {
+        isMouseOver = false;
+        clearInterval(interval);
+        if (!isMouseOver) {
+            interval = setInterval(() => {
+                targetElement.innerText = targetElement.innerText.split("").map(()=> {
+                    return letters[Math.floor(Math.random() * letters.length)];
+                }).join("");
+            },500);
+        }
+
+    });
+
+};
 
 
-normal = () => {
-    console.log("goodbye")
-    profileName.innerText = normalText
-    iterations = 30
-}
+createHoverEffect("profileName")
+createHoverEffect("job","FrontEnd Developer")
+createHoverEffect("country","Malaysia")
+
