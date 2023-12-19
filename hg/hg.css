@@ -25,7 +25,26 @@ body {
     box-shadow: 0px 0px 10px;
 }
 
-.black-hover-bg :hover {
+.black-hover-bg-name :hover {
+    transition: all;
+    background-color: black;
+    color: white;
+    border-radius: 2px;
+    padding: 2px;
+    cursor: default;
+    width: auto;
+}
+.black-hover-bg-job :hover {
+    transition: all;
+    background-color: black;
+    color: white;
+    border-radius: 2px;
+    padding: 2px;
+    cursor: default;
+    width: auto;
+}
+.black-hover-bg-country :hover {
+    transition: all;
     background-color: black;
     color: white;
     border-radius: 2px;

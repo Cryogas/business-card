@@ -34,13 +34,13 @@ createHoverEffect= (elementID) => {
         },30);
     });
 
-    if (!isMouseOver) {
-        interval = setInterval(() => {
-            targetElement.innerText = targetElement.innerText.split("").map(()=> {
-                return letters[Math.floor(Math.random() * letters.length)];
-            }).join("");
-        },1000);
-    }
+    // if (!isMouseOver) {
+    //     interval = setInterval(() => {
+    //         targetElement.innerText = targetElement.innerText.split("").map(()=> {
+    //             return letters[Math.floor(Math.random() * letters.length)];
+    //         }).join("");
+    //     },1000);
+    // }
 
     targetElement.addEventListener("mouseleave", () => {
         isMouseOver = false;
@@ -57,7 +57,6 @@ createHoverEffect= (elementID) => {
     });
 
 };
-
 
 
 createHoverEffect("profileName")
