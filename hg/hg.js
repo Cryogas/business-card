@@ -42,9 +42,9 @@ createHoverEffect= (elementID) => {
     //     },1000);
     // }
 
-    targetElement.addEventListener("mouseleave", () => {
+    targetElement.addEventListener("mouseleave", () => { 
         isMouseOver = false;
-        clearInterval(interval);
+        clearInterval(interval); 
         console.log(isMouseOver);
         if (!isMouseOver) {
             interval = setInterval(() => {
